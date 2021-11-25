@@ -2,15 +2,17 @@
 
 API testing bot
 
-![Demo](./docs/api-test-bot-demo.png)
+![Demo](./docs/test-bot-demo.gif)
 
-[Link to video demo](./docs/test-bot-demo.webm)
+[Link to video demo](./docs/test-bot-demo.mp4)
 
 ## Features
 
-- [ ] entrypoint points automatically open the report based on deafult browser once reports are ready
-- [ ] Open for Extensability, can add more APIs to test.
-- [ ] Utlizing advanced PUT Parameterized Unit-testing technique
+- [x] entrypoint points automatically open the report based on deafult browser once reports are ready
+- [x] Open for Extensability, can add more APIs to test.
+- [x] Utlizing advanced PUT Parameterized Unit-testing technique
+- [x] Beautyful and easy to understand reports
+- [x] Can run tests in Parallel
 
 ## How to run
 
@@ -36,6 +38,10 @@ use the follwong command
 ```
 ${BROWSER} output/report.html
 ```
+
+### More
+
+[Further information about API being tested](./docs/api-documentation-animechan.md)
 
 #### :v: Get in touch with me
 
