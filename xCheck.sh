@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # AUTHOR      : avimehenwal
 # DATE        : 25-Nov-2021
@@ -9,16 +9,20 @@
 
 output_dir="output"
 
-CMD="robot --outputdir ${output_dir}"
-test=src/test.robot
+typeset -A apis
+apis[animechan]=src/animechan.robot
 
-remove_older_reports () {
+CMD="robot --outputdir ${output_dir}"
+
+remove_older_reports() {
   [ -d ${output_dir} ] && rm -rfv ${output_dir}
 }
 
 # MAIN
 remove_older_reports
-${CMD} ${test}
+echo ${(kv)APIS}
+
+${CMD} "${APIS[animechan]}"
 ${BROWSER} "${output_dir}/report.html"
 
 # END
