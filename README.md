@@ -6,3 +6,4 @@ API testing bot
 
 - [ ] entrypoint points automatically open the report based on deafult browser once reports are ready
 - [ ] Open for Extensability, can add more APIs to test.
+- [ ] Utlizing advanced PUT Parameterized Unit-testing technique
