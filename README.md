@@ -2,7 +2,9 @@
 
 API testing bot
 
-![Demo](../api-test-bot/docs/api-test-bot-demo.png)
+![Demo](./docs/api-test-bot-demo.png)
+
+[Link to video demo](./docs/test-bot-demo.webm)
 
 ## Features
 
