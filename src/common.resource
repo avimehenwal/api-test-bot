@@ -5,21 +5,14 @@ Library           RequestsLibrary
 Library           Collections
 
 *** Variables ***
-${HOST}           localhost:7272
-${LOGIN URL}      http://${HOST}/
-${WELCOME URL}    http://${HOST}/welcome.html
-${BROWSER}        Firefox
+
 
 *** Keywords ***
-Open Login Page
-    [Documentation]    Opens browser to login page
-    Open Browser    ${LOGIN URL}    ${BROWSER}
-    Title Should Be    Login Page
 
-Input Name
-    [Arguments]    ${name}
-    Input Text    username_field    ${name}
-
-Input Password
-    [Arguments]    ${password}
-    Input Text    password_field    ${password}
+Shape Of Response
+    [Documentation]    reusable keyword to be validated for each response recieved
+    [Arguments]        ${response}    @{response_keys}
+    FOR    ${key}    IN    @{response_keys}
+        Dictionary Should Contain Key     ${response}     ${key}
+        Should Not Be Empty               ${response}[${key}]            msg="value is empty in key ${key}"
+    END
